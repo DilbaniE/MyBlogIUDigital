@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo utilizar Git - Tutorial Detallado</title>
+<style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { width: 80%; margin: auto; overflow: hidden; }
+        header { background: #333; color: #fff; padding-top: 30px; min-height: 70px; border-bottom: #0779e4 3px solid; }
+        header h1 { text-align: center; }
+        img { max-width: 100%; height: auto; margin: 20px 0; }
+        code { background: #f4f4f4; border: 1px solid #ddd; border-radius: 3px; padding: 2px 5px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cómo utilizar Git - Tutorial Detallado</h1>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Introducción</h2>
+            <p>Git es un sistema de control de versiones distribuido que permite a los desarrolladores rastrear cambios en su código y colaborar con otros. En este tutorial, aprenderemos cómo inicializar un repositorio local, crear ramas y conectar un repositorio local con GitHub.</p>
+        </section>
+
+        <section>
+            <h2>1. Instalación y Configuración de Git</h2>
+            <h3>1.1 Descarga e Instalación</h3>
+            <p>Para Windows, descarga Git desde el sitio oficial:</p>
+            <a href="https://git-scm.com/download/win" target="_blank">Descargar Git para Windows</a>
+            <img src="/imagenes/download.png" alt="Descarga de Git">
+
+            <h3>1.2 Configuración Inicial</h3>
+            <p>Después de la instalación, configura tu nombre de usuario y correo electrónico:</p>
+            <code>git config --global user.name "Tu Nombre"</code><br>
+            <code>git config --global user.email "tu@email.com"</code>
+            <img src="/imagenes/conf.png" alt="Configuración de Git">
+        </section>
+
+        <section>
+            <h2>2. Inicialización del Repositorio Localmente</h2>
+            <p>Para comenzar a usar Git en tu proyecto:</p>
+            <ol>
+                <li>Abre la terminal en la carpeta del proyecto.</li>
+                <li>Ejecuta el comando: <code>git init</code></li>
+                <li>Git creará un nuevo repositorio en esa carpeta.</li>
+            </ol>
+            <img src="/imagenes/init.png" alt="Git init">
+
+            <h3>2.1 Agregando Archivos al Staging Area</h3>
+            <p>Para preparar los cambios para el commit:</p>
+            <code>git add .</code>
+            <img src="/imagenes/add.png" alt="Git add .">
+
+            <h3>2.2 Realizando el Primer Commit</h3>
+            <p>Para guardar los cambios en el repositorio:</p>
+            <code>git commit -m "Mensaje descriptivo del commit"</code>
+            <img src="/imagenes/commit.png" alt="Git commit">
+        </section>
+
+        <section>
+            <h2>3. Creación y Manejo de Branches</h2>
+            <p>Las ramas en Git permiten trabajar en nuevas funcionalidades de forma aislada.</p>
+
+            <h3>3.1 Creando una Nueva Rama</h3>
+            <code>git branch nombre-de-la-rama</code>
+            <img src="/imagenes/branch.png" alt="Git branch">
+
+            <h3>3.2 Listando las Ramas</h3>
+            <code>git branch</code>
+            <img src="/imagenes/bran.png" alt="Lista de branches">
+
+            <h3>3.3 Cambiando entre Ramas</h3>
+            <code>git checkout nombre-de-la-rama</code>
+            <img src="/imagenes/checkout.png" alt="Git checkout">
+
+            <h3>3.4 Fusionando Ramas (Merge)</h3>
+            <p>Para incorporar los cambios de una rama a otra:</p>
+            <code>git checkout rama-destino</code><br>
+            <code>git merge rama-origen</code>
+        </section>
+
+        <section>
+            <h2>4. Conectando con un Repositorio Remoto (GitHub)</h2>
+            <h3>4.1 Creando un Nuevo Repositorio en GitHub</h3>
+            <img src="/imagenes/newRepo.png" alt="Nuevo Repositorio en GitHub">
+            <img src="/imagenes/newRepo2.png" alt="Configuración del repositorio">
+
+            <h3>4.2 Conectando el Repositorio Local con el Remoto</h3>
+            <p>Copia la URL del repositorio remoto:</p>
+            <img src="/imagenes/remote.png" alt="URL del repositorio remoto">
+            <p>Conecta tu repositorio local con el remoto:</p>
+            <code>git remote add origin URL-del-repositorio</code>
+
+            <h3>4.3 Subiendo Cambios al Repositorio Remoto</h3>
+            <code>git push -u origin main</code>
+            <img src="/imagenes/master.png" alt="Git push">
+            <p>GitHub te pedirá autenticación:</p>
+            <img src="/imagenes/permisos.png" alt="Autenticación de GitHub">
+            <p>Una vez autenticado, los cambios se subirán exitosamente:</p>
+            <img src="/imagenes/Push.png" alt="Git push exitoso">
+            <p>El repositorio remoto se verá así:</p>
+            <img src="/imagenes/subido.png" alt="Repositorio remoto actualizado">
+        </section>
+
+        <section>
+            <h2>Conclusión</h2>
+            <p>Este tutorial te ha guiado a través de los pasos básicos para usar Git, desde la inicialización de un repositorio local hasta la conexión con GitHub. Practicar estos comandos te ayudará a familiarizarte con el flujo de trabajo de Git y mejorar tu gestión de proyectos de software.</p>
+        </section>
+    </div>
+</body>
+</html>
